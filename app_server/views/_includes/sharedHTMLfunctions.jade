@@ -1,0 +1,22 @@
+mixin outputRating(rating)
+  - for (var i = 1; i <= rating; i++)
+    span.glyphicon.glyphicon-star
+  - for (i = rating; i < 5; i++)
+    span.glyphicon.glyphicon-star-empty
+    
+mixin ratingColor(rating)
+    if rating == 5
+        style.
+            .list-group-item {
+                background-color: green;
+            }
+    else if rating == 4 
+        style.
+            .list-group-item {
+                background-color: yellow;
+            }
+    else if rating == 1 
+        style.
+            .list-group-item {
+                background-color: red;
+            }
